@@ -15,7 +15,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 import { cn } from "@/lib/utils";
-import ToastContainer from "@/components/ui/ToastContainer";
+// import ToastContainer from "@/components/ui/ToastContainer";
 
 export const metadata: Metadata = {
   title: "ParKids — Intelligent Family Growth Planner",
@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className)}>
         {children}
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </body>
     </html>
   );
