@@ -1,18 +1,10 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-// import CookieBanner from "@/components/CookieBanner";
-import { Inter } from "next/font/google";
-
-// import { Toaster } from "@/components/ui/toaster";
-
-// const poppins = Poppins({
-//   subsets: ["latin"],
-//   display: "swap",
-//   weight: ["300", "400", "500", "600", "700"],
-// });
+import { Inter, Fraunces } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces" });
 
 import { cn } from "@/lib/utils";
 // import ToastContainer from "@/components/ui/ToastContainer";
@@ -45,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className)}>
+      <body className={cn(inter.className, fraunces.variable)}>
         {children}
         {/* <ToastContainer /> */}
       </body>

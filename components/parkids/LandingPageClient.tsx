@@ -94,9 +94,10 @@ export default function LandingPageClient({
       <UseCasesSection />
       <PricingSection />
       <FaqSection />
-      {/* <HowItWorks />
+      <Ages />
+      <HowItWorks />
       <Testimonials />
-      <CTA /> */}
+      <CTA />
       <LiveChatWidget />
       <Footer />
     </main>
@@ -198,7 +199,7 @@ function CheckIn() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <FadeIn>
-          <SLabel>💜 Daily Check-In</SLabel>
+          <SLabel>Daily Check-In</SLabel>
           <h2
             className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-[#1a0f3a] mb-5"
             style={{ fontFamily: "'Fraunces', serif" }}
@@ -539,11 +540,6 @@ function Hero() {
               Together.
             </span>
           </h1>
-          {/* <p>
-            Parent-Kids gives parents the tools, insights, and guidance to
-            support every stage of their child's growth — from first words to
-            teenage milestones.
-          </p> */}
           <p>
             ParKids brings structure through check-ins, shared goals, family
             decision-making, and real-time insights.
@@ -604,132 +600,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* <div className="hv">
-          <div className="fc fc1">
-            <div className="fci" style={{ background: "rgba(252,211,77,.18)" }}>
-              🎉
-            </div>
-            <div>
-              <div className="fct">Milestone Reached!</div>
-              <div className="fcs">Emma learned to read 🌟</div>
-            </div>
-          </div>
-          <div className="fc fc2">
-            <div className="fci" style={{ background: "rgba(52,211,153,.15)" }}>
-              📈
-            </div>
-            <div>
-              <div className="fct">Growth Streak</div>
-              <div className="fcs">14 days consistent check-ins</div>
-            </div>
-          </div>
-          <div className="fc fc3">
-            <div
-              className="fci"
-              style={{ background: "rgba(244,114,182,.15)" }}
-            >
-              💡
-            </div>
-            <div>
-              <div className="fct">New Tip Available</div>
-              <div className="fcs">For kids aged 7–9</div>
-            </div>
-          </div>
-
-          <div className="mphone">
-            <svg width="0" height="0">
-              <defs>
-                <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#7c3aed" />
-                  <stop offset="100%" stopColor="#fb923c" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <div className="pt">
-              <div className="pg">Good Morning</div>
-              <div className="pn">The Johnson Family</div>
-              <div className="pd">Tuesday · April 2025</div>
-            </div>
-            <div className="gring">
-              <svg className="rsvg" viewBox="0 0 100 100">
-                <circle className="rbg" cx="50" cy="50" r="45" />
-                <circle className="rf" cx="50" cy="50" r="45" />
-              </svg>
-              <div className="ri2">
-                <div className="rpct">75%</div>
-                <div className="rlbl">Growth</div>
-              </div>
-            </div>
-            <div className="mrow">
-              <div className="mc dn">✓ Social</div>
-              <div className="mc ac">● Cognitive</div>
-              <div className="mc up">○ Motor</div>
-            </div>
-            <div className="ai">
-              <div
-                className="aico"
-                style={{ background: "rgba(167,139,250,.15)" }}
-              >
-                📚
-              </div>
-              <div>
-                <div className="at">Reading Time</div>
-                <div className="as">15 min · Age 7</div>
-              </div>
-              <div
-                className="ab"
-                style={{
-                  background: "rgba(52,211,153,.15)",
-                  color: "#0d9488",
-                }}
-              >
-                Done
-              </div>
-            </div>
-            <div className="ai">
-              <div
-                className="aico"
-                style={{ background: "rgba(251,146,60,.15)" }}
-              >
-                🎨
-              </div>
-              <div>
-                <div className="at">Creative Play</div>
-                <div className="as">20 min · Age 7</div>
-              </div>
-              <div
-                className="ab"
-                style={{
-                  background: "rgba(124,58,237,.12)",
-                  color: "#7c3aed",
-                }}
-              >
-                Up Next
-              </div>
-            </div>
-            <div className="ai">
-              <div
-                className="aico"
-                style={{ background: "rgba(244,114,182,.15)" }}
-              >
-                🧘
-              </div>
-              <div>
-                <div className="at">Calm Corner</div>
-                <div className="as">10 min · Age 7</div>
-              </div>
-              <div
-                className="ab"
-                style={{
-                  background: "rgba(0,0,0,.05)",
-                  color: "var(--text-soft)",
-                }}
-              >
-                Later
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className="hv relative h-[500px] md:h-[500px] w-full">
           <AnimatePresence mode="wait">
             <motion.div
@@ -758,94 +628,104 @@ function Hero() {
     </div>
   );
 }
-// function CTA() {
-//   return (
-//     <section className="cta">
-//       <div className="ctab">
-//         <h2>Start your family&apos;s growth journey</h2>
-//         <div className="cacts">
-//           <Link href="/login" className="bw">
-//             Create Your Family Account
-//           </Link>
-//           <a href="#pricing" className="bgw">
-//             See All Features
-//           </a>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+
+function CTA() {
+  return (
+    <section
+      style={{
+        padding: "80px 0",
+      }}
+    >
+      <div className="ctab">
+        <h2>
+          Your Family's Best Chapter
+          <br />
+          Starts Today
+        </h2>
+
+        <p>
+          Join 14,000+ families using Parent-Kids to raise happy, confident,
+          well-rounded children — free forever to start.
+        </p>
+
+        <div className="cacts">
+          <a href="#" className="bw">
+            Create Free Family Account →
+          </a>
+
+          <a href="#" className="bgw">
+            Book a Live Demo
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function HowItWorks() {
-  const steps = [
-    {
-      n: "1",
-      title: "Create Family Profile",
-      desc: "Add your children, their ages, and development goals. Takes 2 minutes — no forms, no jargon.",
-    },
-    {
-      n: "2",
-      title: "Track & Check In Daily",
-      desc: "Log moods, activities, and milestones. Get instant AI-powered guidance tailored to your child's exact stage.",
-    },
-    {
-      n: "3",
-      title: "Watch Them Flourish",
-      desc: "Review weekly growth summaries, celebrate milestones, and strengthen your family bond every single day.",
-    },
-  ];
   return (
-    <section id="how" className="px-[5%] py-24">
-      <div className="text-center max-w-lg mx-auto mb-14">
-        <div className="flex justify-center">
-          <SLabel>🚀 How It Works</SLabel>
-        </div>
-        <h2
-          className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-[#1a0f3a] mb-3.5"
-          style={{ fontFamily: "'Fraunces', serif" }}
+    <section id="how" className="px-[5%] py-16">
+      <div
+        style={{
+          textAlign: "center",
+          maxWidth: "540px",
+          margin: "0 auto 58px",
+        }}
+      >
+        <div
+          className="slbl"
+          style={{
+            justifyContent: "center",
+          }}
         >
+          How It Works
+        </div>
+
+        <h2 className="stitle">
           Start in Minutes.
           <br />
           Transform Years.
         </h2>
-        <p className="text-[1.05rem] text-[#4b3d6e] leading-7 font-medium">
+
+        <p
+          className="ssub"
+          style={{
+            maxWidth: "100%",
+            marginBottom: 0,
+          }}
+        >
           Three simple steps to a more connected, informed, and empowered
           family.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
-        <div
-          className="hidden md:block absolute top-8 left-[16%] right-[16%] h-0.5"
-          style={{
-            background:
-              "linear-gradient(90deg,transparent,#a78bfa,transparent)",
-          }}
-        />
-        {steps.map((s, i) => (
-          <FadeIn key={s.n} delay={i * 200}>
-            <div className="text-center group">
-              <div
-                className="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center text-white text-2xl font-black z-10 relative transition-all duration-300 group-hover:scale-110"
-                style={{
-                  fontFamily: "'Fraunces', serif",
-                  background: "linear-gradient(135deg,#2d1b69,#7c3aed)",
-                  boxShadow: "0 8px 24px rgba(45,27,105,.3)",
-                }}
-              >
-                {s.n}
-              </div>
-              <h3
-                className="text-[1.06rem] font-extrabold text-[#1a0f3a] mb-2"
-                style={{ fontFamily: "'Fraunces', serif" }}
-              >
-                {s.title}
-              </h3>
-              <p className="text-[.85rem] text-[#7c6fa0] leading-7 font-medium">
-                {s.desc}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
+
+      <div className="steps">
+        <div className="step">
+          <div className="stepn">1</div>
+          <h3>Create Family Profile</h3>
+          <p>
+            Add your children, their ages, and development goals. Takes 2
+            minutes — no forms, no jargon.
+          </p>
+        </div>
+
+        <div className="step d2">
+          <div className="stepn">2</div>
+          <h3>Track & Check In Daily</h3>
+          <p>
+            Log moods, activities, and milestones. Get instant AI-powered
+            guidance tailored to your child's exact stage.
+          </p>
+        </div>
+
+        <div className="step d4">
+          <div className="stepn">3</div>
+          <h3>Watch Them Flourish</h3>
+          <p>
+            Review weekly growth summaries, celebrate milestones, and strengthen
+            your family bond every single day.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -853,144 +733,337 @@ function HowItWorks() {
 
 /* ─── Testimonials ─── */
 function Testimonials() {
-  const cards = [
-    {
-      q: "Parent-Kids showed me my 9-year-old had been anxious for weeks before I even noticed. The mood patterns changed how I showed up for her completely.",
-      name: "Amara O.",
-      role: "Mom of Zoe, 9 · Austin, TX",
-      grad: "#7c3aed,#a78bfa",
-      letter: "A",
-    },
-    {
-      q: "The teen guides are genuinely brilliant. My 15-year-old and I finally have a framework for conversations I never knew how to start. Total game changer.",
-      name: "Robert K.",
-      role: "Dad of Kai, 15 · Chicago, IL",
-      grad: "#fb923c,#fcd34d",
-      letter: "R",
-    },
-    {
-      q: "Three kids, three different ages. Parent-Kids handles all of them brilliantly — each child gets content that's exactly right for where they are developmentally.",
-      name: "Lisa M.",
-      role: "Mom of 3 · Seattle, WA",
-      grad: "#34d399,#38bdf8",
-      letter: "L",
-    },
-  ];
   return (
-    <section
-      id="stories"
-      className="px-[5%] py-24"
-      style={{
-        background:
-          "radial-gradient(ellipse 60% 50% at 15% 50%,rgba(167,139,250,.10) 0%,transparent 60%),linear-gradient(135deg,rgba(45,27,105,.03) 0%,#fdfbff 100%)",
-      }}
-    >
-      <div className="text-center max-w-lg mx-auto mb-14">
-        <div className="flex justify-center">
-          <SLabel>💬 Family Stories</SLabel>
-        </div>
-        <h2
-          className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-[#1a0f3a]"
-          style={{ fontFamily: "'Fraunces', serif" }}
+    <section id="stories" className="px-[5%] py-16 tbg">
+      <div
+        style={{
+          textAlign: "center",
+          maxWidth: "520px",
+          margin: "0 auto 50px",
+        }}
+      >
+        <div
+          className="slbl"
+          style={{
+            justifyContent: "center",
+          }}
         >
+          Family Stories
+        </div>
+
+        <h2 className="stitle">
           Families Who Found
           <br />
           Their Rhythm
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {cards.map((c, i) => (
-          <FadeIn key={c.name} delay={i * 200}>
+
+      <div className="tgrid">
+        <div className="tcard">
+          <div className="tq">"</div>
+
+          <p>
+            Parent-Kids showed me my 9-year-old had been anxious for weeks
+            before I even noticed. The mood patterns changed how I showed up for
+            her completely.
+          </p>
+
+          <div className="tau">
             <div
-              className="rounded-[28px] p-6 transition-all duration-300 hover:-translate-y-1.5"
+              className="tav"
               style={{
-                background: "rgba(255,255,255,.82)",
-                backdropFilter: "blur(14px)",
-                border: "1.5px solid rgba(255,255,255,.95)",
-                boxShadow: "0 16px 56px rgba(92,33,182,.10)",
+                background: "linear-gradient(135deg,#7c3aed,#a78bfa)",
               }}
             >
-              <div
-                className="text-[2.2rem] text-[#a78bfa] leading-none mb-3"
-                style={{ fontFamily: "'Fraunces', serif" }}
-              >
-                "
-              </div>
-              <p className="text-[.87rem] leading-7 text-[#4b3d6e] mb-4 italic">
-                {c.q}
-              </p>
-              <div className="flex items-center gap-2.5">
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-[.86rem] font-extrabold text-white"
-                  style={{ background: `linear-gradient(135deg,${c.grad})` }}
-                >
-                  {c.letter}
-                </div>
-                <div>
-                  <div className="text-[.83rem] font-extrabold text-[#1a0f3a]">
-                    {c.name}
-                  </div>
-                  <div className="text-[.68rem] text-[#7c6fa0]">{c.role}</div>
-                </div>
-              </div>
+              A
             </div>
-          </FadeIn>
-        ))}
+
+            <div>
+              <div className="tn">Amara O.</div>
+              <div className="tr">Mom of Zoe, 9 · Austin, TX</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="tcard d2">
+          <div className="tq">"</div>
+
+          <p>
+            The teen guides are genuinely brilliant. My 15-year-old and I
+            finally have a framework for conversations I never knew how to
+            start. Total game changer.
+          </p>
+
+          <div className="tau">
+            <div
+              className="tav"
+              style={{
+                background: "linear-gradient(135deg,#fb923c,#fcd34d)",
+              }}
+            >
+              R
+            </div>
+
+            <div>
+              <div className="tn">Robert K.</div>
+              <div className="tr">Dad of Kai, 15 · Chicago, IL</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="tcard d4">
+          <div className="tq">"</div>
+
+          <p>
+            Three kids, three different ages. Parent-Kids handles all of them
+            brilliantly — each child gets content that's exactly right for where
+            they are developmentally.
+          </p>
+
+          <div className="tau">
+            <div
+              className="tav"
+              style={{
+                background: "linear-gradient(135deg,#34d399,#38bdf8)",
+              }}
+            >
+              L
+            </div>
+
+            <div>
+              <div className="tn">Lisa M.</div>
+              <div className="tr">Mom of 3 · Seattle, WA</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
-/* ─── CTA ─── */
-function CTA() {
+function Ages() {
   return (
-    <section className="px-[4%] py-20">
-      <div
-        className="rounded-[44px] px-[8%] py-16 text-center relative overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(135deg,#2d1b69 0%,#5b21b6 55%,#7c3aed 100%)",
-          boxShadow: "0 28px 72px rgba(45,27,105,.32)",
-        }}
-      >
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 50% 80% at 15% 50%,rgba(255,255,255,.07) 0%,transparent 55%),radial-gradient(ellipse 40% 60% at 85% 25%,rgba(244,114,182,.14) 0%,transparent 50%)",
-          }}
-        />
-        <h2
-          className="text-4xl md:text-5xl font-black text-white tracking-tight mb-3.5 relative"
-          style={{ fontFamily: "'Fraunces', serif" }}
-        >
-          Your Family's Best Chapter
-          <br />
-          Starts Today
-        </h2>
-        <p className="text-[1.05rem] text-white/70 max-w-md mx-auto mb-8 leading-7 font-medium relative">
-          Join 14,000+ families using Parent-Kids to raise happy, confident,
-          well-rounded children — free forever to start.
-        </p>
-        <div className="flex justify-center gap-3.5 flex-wrap relative">
-          <a
-            href="/login"
-            className="inline-flex items-center gap-2 bg-white text-[#2d1b69] px-7 py-3.5 rounded-full font-extrabold text-[.95rem] no-underline transition-all hover:-translate-y-1 hover:scale-[1.03]"
-            style={{ boxShadow: "0 6px 24px rgba(0,0,0,.2)" }}
-          >
-            Create Free Family Account →
-          </a>
-          <a
-            href="#pricing"
-            className="inline-flex items-center gap-2 text-white px-6 py-3.5 rounded-full font-bold text-[.95rem] no-underline transition-all hover:bg-white/20 hover:-translate-y-0.5"
+    <section id="ages" className="px-[5%] py-16 abg">
+      <div className="slbl">Age-Based Growth</div>
+      <h2 className="stitle">
+        Built for Every Stage
+        <br />
+        of Childhood
+      </h2>
+      <p className="ssub">
+        Parent-Kids adapts to your child's exact age — with content, milestones,
+        and tools that evolve as they grow from 4 to 17.
+      </p>
+
+      <div className="agrid">
+        <div className="acard">
+          <div
+            className="abadge"
             style={{
-              background: "rgba(255,255,255,.12)",
-              backdropFilter: "blur(8px)",
-              border: "1.5px solid rgba(255,255,255,.32)",
+              background: "rgba(167,139,250,.15)",
+              color: "var(--purple)",
             }}
           >
-            See All Features
-          </a>
+            4–6<span>yrs</span>
+          </div>
+
+          <div className="abody">
+            <h3>Little Explorers</h3>
+            <p>
+              Foundation years. Language explosion, social play, and big
+              feelings. Track speech, motor skills, and early curiosity
+              milestones.
+            </p>
+
+            <div className="atags">
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(167,139,250,.12)",
+                  color: "var(--purple)",
+                }}
+              >
+                Language
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(52,211,153,.12)",
+                  color: "#0d9488",
+                }}
+              >
+                Motor Skills
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(251,146,60,.12)",
+                  color: "#c2410c",
+                }}
+              >
+                Social Play
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="acard d1">
+          <div
+            className="abadge"
+            style={{
+              background: "rgba(56,189,248,.15)",
+              color: "#0369a1",
+            }}
+          >
+            7–9<span>yrs</span>
+          </div>
+
+          <div className="abody">
+            <h3>Young Thinkers</h3>
+            <p>
+              Reading, logic, and friendship. Build emotional vocabulary, study
+              habits, and creative confidence in school-age children.
+            </p>
+
+            <div className="atags">
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(56,189,248,.12)",
+                  color: "#0369a1",
+                }}
+              >
+                Reading
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(252,211,77,.15)",
+                  color: "#92400e",
+                }}
+              >
+                Emotions
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(244,114,182,.12)",
+                  color: "#9d174d",
+                }}
+              >
+                Creativity
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="acard d2">
+          <div
+            className="abadge"
+            style={{
+              background: "rgba(251,146,60,.15)",
+              color: "#c2410c",
+            }}
+          >
+            10–13<span>yrs</span>
+          </div>
+
+          <div className="abody">
+            <h3>Growing Independents</h3>
+            <p>
+              Pre-teen transitions. Self-identity, peer relationships, and
+              academic pressure. Tools designed for both parent and child.
+            </p>
+
+            <div className="atags">
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(251,146,60,.12)",
+                  color: "#c2410c",
+                }}
+              >
+                Identity
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(167,139,250,.12)",
+                  color: "var(--purple)",
+                }}
+              >
+                Study Skills
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(52,211,153,.12)",
+                  color: "#0d9488",
+                }}
+              >
+                Resilience
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="acard d3">
+          <div
+            className="abadge"
+            style={{
+              background: "rgba(244,114,182,.15)",
+              color: "#9d174d",
+            }}
+          >
+            14–17<span>yrs</span>
+          </div>
+
+          <div className="abody">
+            <h3>Teen Pathfinders</h3>
+            <p>
+              Purpose, autonomy, and emotional depth. Navigate teen
+              conversations, mental health support, and future planning
+              together.
+            </p>
+
+            <div className="atags">
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(244,114,182,.12)",
+                  color: "#9d174d",
+                }}
+              >
+                Mental Health
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(252,211,77,.15)",
+                  color: "#92400e",
+                }}
+              >
+                Purpose
+              </span>
+
+              <span
+                className="atag"
+                style={{
+                  background: "rgba(167,139,250,.12)",
+                  color: "var(--purple)",
+                }}
+              >
+                Autonomy
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
